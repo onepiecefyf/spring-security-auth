@@ -1,0 +1,20 @@
+server:
+  port: 18000
+
+spring:
+  profiles:
+    active: local-dev
+
+# mybatis-plus
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.nologging.NoLoggingImpl
+  global-config:
+    banner: false
+    db-config:
+      field-strategy: NOT_NULL
+      id-type: ASSIGN_ID
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      table-underline: true
